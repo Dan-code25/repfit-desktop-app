@@ -1,0 +1,242 @@
+[
+  {
+    "id": "side_lateral_raise",
+    "name": "Side Lateral Raise",
+    "muscleGroup": "shoulders",
+    "tracking": "reps"
+  },
+  {
+    "id": "band_pull_apart",
+    "name": "Band Pull Apart",
+    "muscleGroup": "shoulders",
+    "tracking": "reps"
+  },
+  {
+    "id": "dumbbell_overhead_shoulder_press",
+    "name": "Dumbbell Overhead Shoulder Press",
+    "muscleGroup": "shoulders",
+    "tracking": "reps"
+  },
+  {
+    "id": "overhead_trap_raises",
+    "name": "Overhead Trap Raises",
+    "muscleGroup": "shoulders",
+    "tracking": "reps"
+  },
+  {
+    "id": "standing_shoulder_abduction",
+    "name": "Standing Shoulder Abduction",
+    "muscleGroup": "shoulders",
+    "tracking": "reps"
+  },
+  {
+    "id": "standing_shoulder_extension",
+    "name": "Standing Shoulder Extension",
+    "muscleGroup": "shoulders",
+    "tracking": "reps"
+  },
+  {
+    "id": "standing_shoulder_scaption",
+    "name": "Standing Shoulder Scaption",
+    "muscleGroup": "shoulders",
+    "tracking": "reps"
+  },
+
+  {
+    "id": "wall_pushup",
+    "name": "Wall Pushup",
+    "muscleGroup": "chest",
+    "tracking": "reps"
+  },
+  {
+    "id": "pushup",
+    "name": "Pushup",
+    "muscleGroup": "chest",
+    "tracking": "reps"
+  },
+  {
+    "id": "burpees",
+    "name": "Burpees",
+    "muscleGroup": "chest",
+    "tracking": "reps"
+  },
+  {
+    "id": "dumbbell_floor_press",
+    "name": "Dumbbell Floor Press",
+    "muscleGroup": "chest",
+    "tracking": "reps"
+  },
+  {
+    "id": "decline_pushups",
+    "name": "Decline Pushups",
+    "muscleGroup": "chest",
+    "tracking": "reps"
+  },
+  {
+    "id": "dumbbell_floor_flyes",
+    "name": "Dumbbell Floor Flyes",
+    "muscleGroup": "chest",
+    "tracking": "reps"
+  },
+
+  {
+    "id": "pullups",
+    "name": "Pullups",
+    "muscleGroup": "back",
+    "tracking": "reps"
+  },
+  {
+    "id": "barbell_row",
+    "name": "Barbell Row",
+    "muscleGroup": "back",
+    "tracking": "reps"
+  },
+  {
+    "id": "one_arm_row",
+    "name": "One Arm Row",
+    "muscleGroup": "back",
+    "tracking": "reps"
+  },
+  {
+    "id": "deadlift",
+    "name": "Deadlift",
+    "muscleGroup": "back",
+    "tracking": "reps"
+  },
+  {
+    "id": "renegade_rows",
+    "name": "Renegade Rows",
+    "muscleGroup": "back",
+    "tracking": "reps"
+  },
+  {
+    "id": "good_mornings",
+    "name": "Good Mornings",
+    "muscleGroup": "back",
+    "tracking": "reps"
+  },
+
+  {
+    "id": "standing_dumbbell_overhead_extension",
+    "name": "Standing Dumbbell Overhead Extension",
+    "muscleGroup": "triceps",
+    "tracking": "reps"
+  },
+  {
+    "id": "dumbbell_kickbacks",
+    "name": "Dumbbell Kickbacks",
+    "muscleGroup": "triceps",
+    "tracking": "reps"
+  },
+  {
+    "id": "floor_skull_crushers",
+    "name": "Floor Skull Crushers",
+    "muscleGroup": "triceps",
+    "tracking": "reps"
+  },
+  {
+    "id": "plank_triceps_extension",
+    "name": "Plank Triceps Extension",
+    "muscleGroup": "triceps",
+    "tracking": "reps"
+  },
+
+  {
+    "id": "dumbbell_biceps_curls",
+    "name": "Dumbbell Biceps Curls",
+    "muscleGroup": "biceps",
+    "tracking": "reps"
+  },
+  {
+    "id": "dumbbell_hammer_curls",
+    "name": "Dumbbell Hammer Curls",
+    "muscleGroup": "biceps",
+    "tracking": "reps"
+  },
+  {
+    "id": "concentration_curl",
+    "name": "Concentration Curl",
+    "muscleGroup": "biceps",
+    "tracking": "reps"
+  },
+  {
+    "id": "reverse_curls",
+    "name": "Reverse Curls",
+    "muscleGroup": "biceps",
+    "tracking": "reps"
+  },
+
+  {
+    "id": "situps",
+    "name": "Sit-ups",
+    "muscleGroup": "core",
+    "tracking": "reps"
+  },
+  {
+    "id": "standing_ab_twists",
+    "name": "Standing Ab Twists",
+    "muscleGroup": "core",
+    "tracking": "reps"
+  },
+  {
+    "id": "standing_active_straight_leg_raise",
+    "name": "Standing Active Straight Leg Raise",
+    "muscleGroup": "core",
+    "tracking": "reps"
+  },
+  {
+    "id": "plank",
+    "name": "Plank",
+    "muscleGroup": "core",
+    "tracking": "time"
+  },
+  {
+    "id": "lying_leg_raises",
+    "name": "Lying Leg Raises",
+    "muscleGroup": "core",
+    "tracking": "reps"
+  },
+  {
+    "id": "russian_twists",
+    "name": "Russian Twists",
+    "muscleGroup": "core",
+    "tracking": "reps"
+  },
+
+  {
+    "id": "squat",
+    "name": "Squat",
+    "muscleGroup": "legs",
+    "tracking": "reps"
+  },
+  {
+    "id": "dumbbell_reverse_lunge",
+    "name": "Dumbbell Reverse Lunge",
+    "muscleGroup": "legs",
+    "tracking": "reps"
+  },
+  {
+    "id": "mule_kick",
+    "name": "Mule Kick",
+    "muscleGroup": "legs",
+    "tracking": "reps"
+  },
+  {
+    "id": "hurdle_step",
+    "name": "Hurdle Step",
+    "muscleGroup": "legs",
+    "tracking": "reps"
+  },
+  {
+    "id": "inline_lunge",
+    "name": "Inline Lunge",
+    "muscleGroup": "legs",
+    "tracking": "reps"
+  },
+  {
+    "id": "side_lunge",
+    "name": "Side Lunge",
+    "muscleGroup": "legs",
+    "tracking": "reps"
+  }
+]
