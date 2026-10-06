@@ -6,4 +6,11 @@
 
 @theme {
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #131316;
+  --color-sidebar: #0e0e13;
+  --color-text-primary: #f4f4f5;
+  --color-text-secondary: #a1a1aa;
+  --color-accent: #7830f7;
+  --color-accent-surface: #1e1330;
 }
