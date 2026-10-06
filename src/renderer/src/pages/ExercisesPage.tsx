@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import exercises from '../../../../shared/exercises.json'
 import PillGroup, { type PillGroupOption } from '../components/PillGroup'
 import ExerciseCard from '../components/ExerciseCard'
 import { capitalize } from '../lib/capitalize'
-import { imagesByExerciseId } from '../lib/exerciseImages'
+import { imagesByExerciseId } from '../lib/exercises'
 
 const muscleGroups = [...new Set(exercises.map(({ muscleGroup }) => muscleGroup))]
 
@@ -14,6 +16,7 @@ const groupOptions: PillGroupOption[] = [
 
 function ExercisesPage(): React.JSX.Element {
   const [selectedGroup, setSelectedGroup] = useState('')
+  const navigate = useNavigate()
 
   const visibleExercises =
     selectedGroup === ''
@@ -38,6 +41,7 @@ function ExercisesPage(): React.JSX.Element {
               name={name}
               target={capitalize(muscleGroup)}
               image={imagesByExerciseId[id]}
+              onClick={() => navigate(`/exercises/${id}`)}
             />
           </li>
         ))}

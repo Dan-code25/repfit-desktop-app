@@ -1,14 +1,19 @@
 import { Dumbbell, Target } from 'lucide-react'
+import { MouseEventHandler } from 'react'
 
 interface ExerciseCardProps {
   name: string
   target: string
   image?: string
+  onClick?: MouseEventHandler<HTMLDivElement>
 }
 
-function ExerciseCard({ name, target, image }: ExerciseCardProps): React.JSX.Element {
+function ExerciseCard({ name, target, image, onClick }: ExerciseCardProps): React.JSX.Element {
   return (
-    <div className="group flex h-full flex-col overflow-hidden rounded-lg border border-white/10 transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/20 cursor-pointer">
+    <div
+      className="group flex h-full flex-col overflow-hidden rounded-lg border border-white/10 transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/20 cursor-pointer"
+      onClick={onClick}
+    >
       <div className="flex aspect-[16/7] items-center justify-center overflow-hidden bg-white/5">
         {image ? (
           <img

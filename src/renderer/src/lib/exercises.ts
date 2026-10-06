@@ -1,3 +1,11 @@
+import exercises from '../../../../shared/exercises.json'
+import type { Exercise } from '@renderer/types/exercise.types'
+
+export const getExerciseById = (id: string): Exercise | undefined => {
+  const exercise = exercises.find((e) => e.id === id)
+  return exercise
+}
+
 const exerciseImages = import.meta.glob<string>(
   '../assets/exercises/*.{png,jpg,jpeg,webp,avif,svg}',
   {
