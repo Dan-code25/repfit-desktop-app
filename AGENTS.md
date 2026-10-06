@@ -62,3 +62,21 @@ Offline Windows 10/11 (64-bit) desktop app. A webcam + Python pose engine counts
 - Don't add unrequested features, options or config flags.
 - Don't guess at APIs, files or types. Check they exist. Don't leave stubs, placeholders or TODOs in place of working code.
 - Match the surrounding code's style and naming.
+
+## Plan mode
+- In plan mode, do not modify files, create files, delete files, install dependencies, or run commands that change the project.
+- First inspect the relevant existing code, types, components, IPC handlers, database queries, and configuration needed to - understand the task.
+- Base the plan on the current codebase, not assumptions. Verify that referenced files, functions, types, and APIs exist.
+- Identify the simplest implementation that fits the existing architecture and patterns.
+- Before proposing changes, trace the affected flow across renderer, preload, main, database, and engine when applicable.
+- The plan should clearly state:
+    - what needs to change
+    - which files are likely affected
+    - how the parts will communicate
+    - important edge cases or risks
+    - whether any existing behavior or invariants could be affected
+- Prefer a small, complete plan over a broad redesign.
+- Do not propose architecture changes, new dependencies, or abstractions unless they are necessary for the requirement.
+- Do not make implementation changes until the user explicitly asks to proceed.
+- When the task is unclear and the uncertainty could materially change the implementation, ask a focused question before finalizing the plan.
+- After planning, wait for approval before executing the plan.
