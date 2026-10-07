@@ -99,9 +99,6 @@ export default function WorkoutCard({
         >
           <Play className="h-4 w-4 fill-current" aria-hidden="true" />
           Start workout
-          <span className="rounded border border-accent/30 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide">
-            Soon
-          </span>
         </button>
       </div>
     </li>
