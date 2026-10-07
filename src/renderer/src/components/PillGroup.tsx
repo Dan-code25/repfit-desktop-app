@@ -14,11 +14,7 @@ interface PillGroupProps {
 
 function PillGroup({ ariaLabel, options, value, onChange }: PillGroupProps): React.JSX.Element {
   return (
-    <div
-      role="group"
-      aria-label={ariaLabel}
-      className="sticky top-0 z-10 flex flex-wrap gap-2 bg-background py-2"
-    >
+    <div role="group" aria-label={ariaLabel} className="flex flex-wrap gap-2">
       {options.map(({ value: option, label }) => (
         <Pill
           key={option}
