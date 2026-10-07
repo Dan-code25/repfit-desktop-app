@@ -10,9 +10,16 @@ interface PillGroupProps {
   options: PillGroupOption[]
   value: string
   onChange: (value: string) => void
+  size?: 'sm' | 'md'
 }
 
-function PillGroup({ ariaLabel, options, value, onChange }: PillGroupProps): React.JSX.Element {
+function PillGroup({
+  ariaLabel,
+  options,
+  value,
+  onChange,
+  size
+}: PillGroupProps): React.JSX.Element {
   return (
     <div role="group" aria-label={ariaLabel} className="flex flex-wrap gap-2">
       {options.map(({ value: option, label }) => (
@@ -20,6 +27,7 @@ function PillGroup({ ariaLabel, options, value, onChange }: PillGroupProps): Rea
           key={option}
           label={label}
           active={option === value}
+          size={size}
           onClick={() => onChange(option)}
         />
       ))}
