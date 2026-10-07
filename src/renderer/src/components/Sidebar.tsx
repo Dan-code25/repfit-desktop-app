@@ -10,23 +10,30 @@ export interface NavItem {
 
 function Sidebar({ navItems }: { navItems: NavItem[] }): React.JSX.Element {
   return (
-    <nav className="sticky top-0 flex h-screen w-20 shrink-0 flex-col items-center bg-sidebar px-2 py-6 text-text-primary">
-      <img src={RepfitLogo} alt="RepFit" className="w-full pb-6" />
+    <nav
+      aria-label="Main navigation"
+      className="sticky top-0 flex h-screen w-52 shrink-0 flex-col border-r border-white/5 bg-sidebar px-4 py-7 text-text-primary xl:w-56"
+    >
+      <img src={RepfitLogo} alt="RepFit" className="mb-10 h-auto w-32" />
 
-      <ul className="flex w-full flex-col gap-2">
+      <span className="mb-3 px-3 text-xs font-semibold uppercase tracking-[0.16em] text-text-secondary">
+        Navigation
+      </span>
+
+      <ul className="flex w-full flex-1 flex-col gap-1">
         {navItems.map(({ to, label, icon: Icon }) => (
-          <li key={to}>
+          <li key={to} className="last:mt-auto last:border-t last:border-white/10 last:pt-4">
             <NavLink
               to={to}
               className={({ isActive }) =>
-                `flex flex-col items-center gap-1 rounded-lg px-2 py-2 text-center text-xs font-medium transition-colors ${
+                `flex min-h-12 items-center gap-3 rounded-lg border-l-2 px-3 text-sm font-medium transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-foreground motion-reduce:transition-none ${
                   isActive
-                    ? 'bg-accent-surface text-accent'
-                    : 'text-text-secondary hover:bg-white/5 hover:text-text-primary'
+                    ? 'border-accent bg-accent-surface text-accent-foreground'
+                    : 'border-transparent text-text-secondary hover:bg-white/5 hover:text-text-primary active:bg-white/10'
                 }`
               }
             >
-              <Icon className="h-5 w-5" aria-hidden="true" />
+              <Icon className="h-5 w-5 shrink-0" aria-hidden="true" />
               <span>{label}</span>
             </NavLink>
           </li>
