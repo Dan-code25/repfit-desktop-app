@@ -16,6 +16,12 @@
   --color-accent-foreground: #b994ff;
 }
 
+@layer components {
+  .page-header {
+    @apply text-3xl font-semibold;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;

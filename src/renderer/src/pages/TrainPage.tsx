@@ -10,7 +10,7 @@ function TrainPage(): React.JSX.Element {
   return (
     <div className="flex flex-col gap-6">
       <header className="flex flex-wrap items-center justify-between gap-4">
-        <h1 className="text-3xl font-semibold tracking-tight">Train</h1>
+        <h1 className="page-header">Train</h1>
         <button
           id="create-workout-button"
           type="button"
