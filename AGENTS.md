@@ -71,6 +71,45 @@ Offline Windows 10/11 (64-bit) desktop app. A webcam + Python pose engine counts
 - Don't guess at APIs, files or types. Check they exist. Don't leave stubs, placeholders or TODOs in place of working code.
 - Match the surrounding code's style and naming.
 
+## Component Architecture
+
+When creating or modifying React pages, follow these rules:
+
+### 1. Component Separation
+- Do not implement an entire page in a single large component.
+- Break pages into smaller, focused components based on their responsibilities.
+- Each component should have a clear and specific purpose.
+- Extract distinct UI sections into separate components.
+- Keep page components focused on layout, composition, and coordinating child components.
+
+### 2. Component Organization
+- Place reusable UI components in `src/components/ui/`.
+- Place feature-specific components in `src/components/features/<feature-name>/`.
+- Place page components in `src/pages/`.
+- Use PascalCase for React component names and follow the project's existing filename conventions.
+
+### 3. Reusability
+- Extract components when they are reused or represent a meaningful, independent UI section.
+- Pass data and callbacks through typed props.
+- Avoid duplicating UI logic across components.
+- Do not create unnecessary components for trivial elements.
+
+### 4. Logic Separation
+- Keep complex business logic out of presentational components.
+- Extract reusable stateful logic into custom hooks when appropriate.
+- Place API calls and external service interactions in dedicated service modules.
+- Keep components easy to read, test, and maintain.
+
+### 5. Implementation Requirements
+Before implementing a page:
+1. Identify its major UI sections.
+2. Determine which sections should become separate components.
+3. Create the necessary component files.
+4. Compose the components inside the page file.
+5. Follow the existing project structure and naming conventions.
+
+**Important:** Prioritize maintainability, readability, and separation of concerns. Avoid both monolithic components and unnecessary component fragmentation.
+
 ## Plan mode
 
 - In plan mode, do not modify files, create files, delete files, install dependencies, or run commands that change the project.
