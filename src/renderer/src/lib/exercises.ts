@@ -20,3 +20,16 @@ export const imagesByExerciseId: Record<string, string> = Object.fromEntries(
     return [filename.slice(0, filename.lastIndexOf('.')), url]
   })
 )
+
+const exerciseVideos = import.meta.glob<string>('../assets/exercises/*.{mp4,webm}', {
+  eager: true,
+  query: '?url',
+  import: 'default'
+})
+
+export const videosByExerciseId: Partial<Record<string, string>> = Object.fromEntries(
+  Object.entries(exerciseVideos).map(([path, url]) => {
+    const filename = path.slice(path.lastIndexOf('/') + 1)
+    return [filename.slice(0, filename.lastIndexOf('.')), url]
+  })
+)

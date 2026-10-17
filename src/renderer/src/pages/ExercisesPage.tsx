@@ -24,7 +24,7 @@ function ExercisesPage(): React.JSX.Element {
   return (
     <div className="flex flex-col gap-6">
       <header className="space-y-2 pb-1">
-        <h1 className="text-3xl font-semibold tracking-tight">Exercises</h1>
+        <h1 className="page-header">Exercises</h1>
         <p className="text-sm text-text-secondary">Browse exercises by muscle group.</p>
       </header>
 
