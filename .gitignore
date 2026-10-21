@@ -1,6 +1,9 @@
 node_modules
 dist
 out
+engine/build/
+engine/dist/
+engine/__pycache__/
 .DS_Store
 .eslintcache
 *.log*

@@ -5,12 +5,17 @@ directories:
 files:
   - '!**/.vscode/*'
   - '!src/*'
+  - '!engine/**'
+  - '!dev/**'
   - '!electron.vite.config.{js,ts,mjs,cjs}'
   - '!{.eslintcache,eslint.config.mjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
   - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
   - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
 asarUnpack:
   - resources/**
+extraResources:
+  - from: engine/dist/repfit-engine.exe
+    to: engine/repfit-engine.exe
 win:
   executableName: repfit-desktop
 nsis:

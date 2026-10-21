@@ -70,6 +70,7 @@ Offline Windows 10/11 (64-bit) desktop app. A webcam + Python pose engine counts
 - Don't add unrequested features, options or config flags.
 - Don't guess at APIs, files or types. Check they exist. Don't leave stubs, placeholders or TODOs in place of working code.
 - Match the surrounding code's style and naming.
+- Do not build unless stated or it is really needed
 
 ## Component Architecture
 
@@ -128,3 +129,49 @@ Before implementing a page:
 - Do not make implementation changes until the user explicitly asks to proceed.
 - When the task is unclear and the uncertainty could materially change the implementation, ask a focused question before finalizing the plan.
 - After planning, wait for approval before executing the plan.
+
+## Skill Usage
+
+Automatically identify and apply relevant installed skills based on the task. The user does not need to explicitly request a skill.
+
+Before using a skill, read its `SKILL.md` and follow the applicable instructions. Do not assume a skill is installed without checking.
+
+### Superpowers — Development Workflow
+
+- Use relevant Superpowers workflows for feature planning, implementation, debugging, and testing.
+- Use brainstorming when requirements need exploration or clarification.
+- Use systematic debugging when investigating bugs, unexpected behavior, or failing tests.
+- Use test-driven development when applicable to the project's testing rules.
+- Follow Superpowers workflows without introducing unnecessary planning or documentation overhead.
+- Respect the project's Plan Mode rules. Never implement changes while in Plan Mode.
+
+### Ponytail — Code Simplicity
+
+- Apply Ponytail principles when writing, modifying, reviewing, or refactoring code.
+- Prefer the simplest complete implementation that satisfies the requirement.
+- Reuse existing code, utilities, components, and dependencies before introducing new ones.
+- Avoid unnecessary abstractions, wrappers, services, factories, and configuration.
+- Do not optimize solely for fewer lines of code. Prioritize correctness, readability, and maintainability.
+- Never sacrifice security, error handling, or required functionality for simplicity.
+- Preserve the existing architecture and product invariants.
+
+### UI/UX Pro Max — Interface Design
+
+- Use UI/UX Pro Max when designing, creating, or significantly improving user interfaces.
+- Apply its design guidance to layout, typography, spacing, color, accessibility, responsiveness, and visual hierarchy.
+- Prioritize clean, minimal, modern, and professional desktop application interfaces.
+- Avoid generic AI-generated aesthetics, excessive decoration, unnecessary gradients, and visual clutter.
+- Maintain consistency with Repfit's existing design system, components, and visual identity.
+- Preserve existing features and functionality unless changes are explicitly requested.
+- Follow the project's Component Architecture rules when implementing designs.
+- Do not invoke UI/UX Pro Max for backend-only or nonvisual tasks.
+
+### Skill Coordination
+
+- Superpowers guides the development process.
+- Ponytail guides implementation simplicity and code maintainability.
+- UI/UX Pro Max guides visual design and user experience.
+- Use multiple skills when they complement each other.
+- Resolve conflicting skill recommendations by prioritizing this project's architecture, privacy requirements, product invariants, and explicit user instructions.
+- Do not force a skill when it does not meaningfully apply.
+- Do not install, update, or modify skills without user approval.
