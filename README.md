@@ -14,6 +14,19 @@ An Electron application with React and TypeScript
 $ npm install
 ```
 
+For the Python engine, use Python 3.11 and install its pinned requirements into
+the project environment:
+
+```powershell
+python -m venv --system-site-packages engine/.venv
+engine/.venv/Scripts/python.exe -m pip install -r engine/requirements.txt
+```
+
+This reuses existing compatible packages and installs differing pinned versions
+locally. Electron automatically prefers this environment. Use
+`engine/.venv/Scripts/python.exe` for engine checks, or activate
+`engine/.venv/Scripts/Activate.ps1` before running Python build commands.
+
 ### Development
 
 ```bash

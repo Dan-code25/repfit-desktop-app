@@ -4,6 +4,7 @@ out
 engine/build/
 engine/dist/
 engine/__pycache__/
+engine/.venv/
 .DS_Store
 .eslintcache
 *.log*
