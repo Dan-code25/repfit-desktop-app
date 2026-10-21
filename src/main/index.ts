@@ -4,6 +4,16 @@ import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 import { openDb, closeDb, isDbOpen } from './db'
 import { registerIpcHandlers } from './ipc'
+import { startEngine, stopEngine } from './engine'
+
+const hasInstanceLock = app.requestSingleInstanceLock()
+if (!hasInstanceLock) app.quit()
+
+app.on('second-instance', () => {
+  const window = BrowserWindow.getAllWindows()[0]
+  if (window?.isMinimized()) window.restore()
+  window?.focus()
+})
 
 function createWindow(): void {
   // Create the browser window.
@@ -43,11 +53,13 @@ function createWindow(): void {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
+  if (!hasInstanceLock) return
   // Set app user model id for windows
   electronApp.setAppUserModelId('com.electron')
   openDb()
   console.log('Database open:', isDbOpen())
   registerIpcHandlers()
+  startEngine().catch((error) => console.error('Could not connect to Python engine:', error))
   // Default open or close DevTools by F12 in development
   // and ignore CommandOrControl + R in production.
   // see https://github.com/alex8088/electron-toolkit/tree/master/packages/utils
@@ -70,8 +82,18 @@ app.whenReady().then(() => {
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
-app.on('before-quit', () => {
-  closeDb()
+let readyToQuit = false
+let stoppingEngine = false
+app.on('before-quit', (event) => {
+  if (readyToQuit) return
+  event.preventDefault()
+  if (stoppingEngine) return
+  stoppingEngine = true
+  void stopEngine().finally(() => {
+    closeDb()
+    readyToQuit = true
+    app.quit()
+  })
 })
 
 app.on('window-all-closed', () => {
